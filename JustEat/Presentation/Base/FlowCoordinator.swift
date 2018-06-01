@@ -10,6 +10,6 @@ import UIKit
 
 protocol FlowCoordinator: AnyObject {
     
-    func prepareScene(for segue: UIStoryboardSegue)
+    func prepareScene<Data>(for segue: UIStoryboardSegue, data: Data)
 
 }

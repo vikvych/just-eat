@@ -13,8 +13,9 @@ struct RestaurantsViewModel {
     
     let dependecyContainer: RestaurantsDataModelContainer
     let zipCode: Property<String?> = Property(nil)
+    let items = Property<[Restaurant]>([])
     
-    init(dependecyContainer: RestaurantsDataModelContainer) {
+    init(with dependecyContainer: RestaurantsDataModelContainer) {
         self.dependecyContainer = dependecyContainer
     }
     
@@ -34,14 +35,38 @@ struct RestaurantsViewModel {
                 
                 return signal.toLoadingSignal()
         }
-        
+                
         let queryNearest = queryNearestSignal
-            .flatMapLatest {
-                dataModel.queryNearestRestaurants()
+            .flatMapLatest { _ in
+                dataModel.queryZipCode()
                     .toLoadingSignal()
+                    .liftValue { zipCodeSignal in
+                        zipCodeSignal
+                            .feedNext(into: self.zipCode, map: { $0 as String? })
+                            .flatMapLatest { zipCode in
+                                dataModel.queryRestaurants(zipCode: zipCode)
+                        }
+                    }
         }
         
         return merge(query, queryNearest)
+            .feedNext(into: items, map: { state in
+                if case .loaded(let items) = state {
+                    return items
+                } else {
+                    return []
+                }
+            })
+    }
+    
+    func zipCodeTitle() -> SafeSignal<String> {
+        return zipCode.map { zipCode in
+            if let zipCode = zipCode, !zipCode.isEmpty {
+                return zipCode.uppercased()
+            } else {
+                return Strings.Restaurants.zipCode
+            }
+        }
     }
     
 }

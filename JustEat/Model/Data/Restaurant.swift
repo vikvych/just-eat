@@ -12,5 +12,14 @@ struct Restaurant: Equatable, Decodable {
     
     let id: ID
     let name: String
-    
+    let ratingStars: Double
+    let logo: [Logo]
+    let cuisineTypes: [CousineType]
+    let isOpenNow: Bool
+    let latitude: Double
+    let longitude: Double
+    let address: String?
+    let city: String?
+    let postcode: String?
+
 }

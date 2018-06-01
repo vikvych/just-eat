@@ -9,7 +9,8 @@ target 'JustEat' do
   pod 'AlamofireImage', '~> 3.3'
   pod 'ReactiveKit'
   pod 'Bond'
-
+  pod 'Cosmos'
+  
   target 'JustEatTests' do
     inherit! :search_paths
     # Pods for testing

@@ -39,17 +39,16 @@ struct RestaurantsDataModel {
             .mapError(AppError.api)
     }
     
-    func queryNearestRestaurants() -> Signal<[Restaurant], AppError> {
+    func queryZipCode() -> Signal<String, AppError> {
         return locationDataSource.requestPlacemark()
-            .mapError(AppError.location)
-            .flatMapLatest { placemark -> Signal<[Restaurant], AppError> in
-                guard let zipCode = placemark.postalCode else {
-                    return Signal.failed(.location(error: .postalCodeNotFound))
+            .tryMap({ placemark -> Result<String, LocationError> in
+                if let zipCode = placemark.postalCode {
+                    return .success(zipCode)
+                } else {
+                    return .failure(.postalCodeNotFound)
                 }
-                
-                return self.remoteDataSource.queryRestaurants(zipCode: zipCode)
-                    .mapError(AppError.api)
-        }
+            })
+            .mapError(AppError.location)
     }
     
 }

@@ -12,29 +12,36 @@ import ReactiveKit
 
 class LocationService: NSObject {
     
-    private let locationSubject = PublishSubject<CLLocation, LocationError>()
+    private var locationObserver: AtomicObserver<CLLocation, LocationError>?
+    
     private lazy var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
         
         manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         
         return manager
     }()
     
     func requestLocation() -> Signal<CLLocation, LocationError> {
-        switch CLLocationManager.authorizationStatus() {
-        case .authorizedAlways, .authorizedWhenInUse:
-            locationManager.startUpdatingLocation()
-        case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
-        case .denied:
-            locationSubject.failed(.denied)
-        case .restricted:
-            locationSubject.failed(.restricted)
+        return Signal<CLLocation, LocationError> { [weak self] observer in
+            switch CLLocationManager.authorizationStatus() {
+            case .authorizedAlways, .authorizedWhenInUse:
+                self?.locationObserver = observer
+                self?.locationManager.requestLocation()
+            case .notDetermined:
+                self?.locationObserver = observer
+                self?.locationManager.requestWhenInUseAuthorization()
+            case .denied:
+                observer.failed(.denied)
+            case .restricted:
+                observer.failed(.restricted)
+            }
+            
+            return BlockDisposable {
+                self?.locationObserver = nil
+            }
         }
-        
-        return locationSubject.toSignal()
     }
     
 }
@@ -44,7 +51,7 @@ extension LocationService: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch status {
         case .authorizedAlways, .authorizedWhenInUse:
-            locationManager.startUpdatingLocation()
+            locationManager.requestLocation()
         default:
             break
         }
@@ -53,8 +60,11 @@ extension LocationService: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         
-        manager.stopUpdatingLocation()
-        locationSubject.next(location)
+        locationObserver?.completed(with: location)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        locationObserver?.failed(.manager(error: error))
     }
     
 }

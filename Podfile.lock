@@ -5,6 +5,7 @@ PODS:
   - Bond (6.8.0):
     - Differ (~> 1.0)
     - ReactiveKit (~> 3.9)
+  - Cosmos (15.0.0)
   - Differ (1.1.1)
   - ReactiveKit (3.9.4)
 
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.7)
   - AlamofireImage (~> 3.3)
   - Bond
+  - Cosmos
   - ReactiveKit
 
 SPEC REPOS:
@@ -19,6 +21,7 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - Bond
+    - Cosmos
     - Differ
     - ReactiveKit
 
@@ -26,9 +29,10 @@ SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
   Bond: f07e371c05e07c46589c4a518515ea39c6263055
+  Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
   Differ: 462849df6097d4e0e5ebbc9af2475f7aebfd65dc
   ReactiveKit: cafbc91f72751d09baa9a3c3cf6d82b646328a6c
 
-PODFILE CHECKSUM: b008fc3c3f6b4f1eab7ac81e6461c67929f670dd
+PODFILE CHECKSUM: 7653efebc26f4689d557ee90aa679ec4902247b8
 
 COCOAPODS: 1.5.0

@@ -12,8 +12,9 @@ enum LocationError: Error {
     
     case denied
     case restricted
-    case geocode(error: Error)
     case postalCodeNotFound
+    case geocode(error: Error)
+    case manager(error: Error)
     
     static let domain = "LocationErrorDomain"
     

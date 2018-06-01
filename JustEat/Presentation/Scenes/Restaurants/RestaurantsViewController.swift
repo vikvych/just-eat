@@ -9,6 +9,7 @@
 import UIKit
 import ReactiveKit
 import Bond
+import AlamofireImage
 
 class RestaurantsViewController: UIViewController {
 
@@ -19,8 +20,10 @@ class RestaurantsViewController: UIViewController {
     @IBOutlet weak var nearestBarButtonItem: UIBarButtonItem!
     @IBOutlet weak var zipCodeBarButtonItem: UIBarButtonItem!
     
+    weak var flowCoordinator: FlowCoordinator?
+    
     var viewModel: RestaurantsViewModel!
-        
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,38 +32,45 @@ class RestaurantsViewController: UIViewController {
             .bind(to: tableView) { items, indexPath, tableView in
                 let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantCell.reuseIdentifier, for: indexPath) as! RestaurantCell
                 
-                cell.nameLabel.text = items[indexPath.row].name
+                cell.infoView.setup(with: items[indexPath.row])
                 
                 return cell
         }
         
+        viewModel.zipCodeTitle().bind(to: zipCodeBarButtonItem.reactive.title)
         zipCodeBarButtonItem.reactive.tap
             .bind(to: self) { me in me.showZipCodeInput() }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow, viewModel.items.value.count > indexPath.row else { return }
+        
+        flowCoordinator?.prepareScene(for: segue, data: viewModel.items.value[indexPath.row])
+    }
+    
     private func showLoading() {
-        activityIndicator.startAnimating()
+        activityIndicator.isHidden = false
         infoLabel.text = nil
         setTableViewHidden(true)
     }
     
     private func showEmpty() {
-        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
         infoLabel.text = Strings.Restaurants.nothingFound
         infoLabel.textColor = .darkText
         setTableViewHidden(true)
     }
     
     private func showLoaded() {
-        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
         setTableViewHidden(false)
     }
     
     private func showFailed(_ error: AppError) {
-        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
         infoLabel.text = error.localizedDescription
         infoLabel.textColor = .red
-        setTableViewHidden(false)
+        setTableViewHidden(true)
     }
     
     private func setTableViewHidden(_ hidden: Bool, animated: Bool = true) {
