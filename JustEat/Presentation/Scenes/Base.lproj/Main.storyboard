@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gDy-7v-sXU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="PX7-02-CIs">
+            <objects>
+                <navigationController id="gDy-7v-sXU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Eiu-sd-nvp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.89803921568627454" green="0.19215686274509802" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <outlet property="delegate" destination="YON-se-FWN" id="ICH-hb-4yu"/>
+                        <segue destination="4kl-4j-hm8" kind="relationship" relationship="rootViewController" id="NYY-6S-q6A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JG8-bY-iph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="YON-se-FWN" customClass="RestaurantsCoordinator" customModule="JustEat" customModuleProvider="target">
+                    <connections>
+                        <outlet property="navigationController" destination="gDy-7v-sXU" id="P6W-Gy-nsf"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="-644" y="201"/>
+        </scene>
+        <!--Restaurants-->
+        <scene sceneID="HQp-kZ-vE2">
+            <objects>
+                <viewController id="4kl-4j-hm8" customClass="RestaurantsViewController" customModule="JustEat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SId-I6-mfo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUb-IK-DJS">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can use zip code or current location to find restaurants" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRF-Ju-7Lv">
+                                        <rect key="frame" x="20" y="280" width="335" height="43"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="DRF-Ju-7Lv" firstAttribute="centerY" secondItem="xUb-IK-DJS" secondAttribute="centerY" id="alX-aP-0WF"/>
+                                    <constraint firstItem="DRF-Ju-7Lv" firstAttribute="leading" secondItem="xUb-IK-DJS" secondAttribute="leading" constant="20" id="gJC-jF-c9K"/>
+                                    <constraint firstAttribute="trailing" secondItem="DRF-Ju-7Lv" secondAttribute="trailing" constant="20" id="ybp-To-JhG"/>
+                                </constraints>
+                            </view>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Vf-gX-ULu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantCell" id="184-f9-6wi" customClass="RestaurantCell" customModule="JustEat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="184-f9-6wi" id="9JT-bP-AZ8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5le-4a-hJ3">
+                                                    <rect key="frame" x="16" y="11" width="343" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="5le-4a-hJ3" secondAttribute="trailing" constant="16" id="Qqe-WR-p01"/>
+                                                <constraint firstItem="5le-4a-hJ3" firstAttribute="centerY" secondItem="9JT-bP-AZ8" secondAttribute="centerY" id="S8B-P0-bPX"/>
+                                                <constraint firstItem="5le-4a-hJ3" firstAttribute="leading" secondItem="9JT-bP-AZ8" secondAttribute="leading" constant="16" id="sS9-Rg-xUk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="5le-4a-hJ3" id="9P9-jd-YB7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="jV0-fM-tpB">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="0.8980392157" green="0.19215686269999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vPy-zu-Kie" firstAttribute="bottom" secondItem="2Vf-gX-ULu" secondAttribute="bottom" id="84R-Cp-haF"/>
+                            <constraint firstItem="vPy-zu-Kie" firstAttribute="trailing" secondItem="2Vf-gX-ULu" secondAttribute="trailing" id="DuI-wP-UNc"/>
+                            <constraint firstItem="vPy-zu-Kie" firstAttribute="bottom" secondItem="xUb-IK-DJS" secondAttribute="bottom" id="HaS-Zp-7fp"/>
+                            <constraint firstItem="jV0-fM-tpB" firstAttribute="centerX" secondItem="SId-I6-mfo" secondAttribute="centerX" id="M5w-GL-T4i"/>
+                            <constraint firstItem="2Vf-gX-ULu" firstAttribute="top" secondItem="vPy-zu-Kie" secondAttribute="top" id="Vpm-ck-hZj"/>
+                            <constraint firstItem="jV0-fM-tpB" firstAttribute="centerY" secondItem="SId-I6-mfo" secondAttribute="centerY" id="gYm-aL-phU"/>
+                            <constraint firstItem="vPy-zu-Kie" firstAttribute="trailing" secondItem="xUb-IK-DJS" secondAttribute="trailing" id="n2n-Re-TsZ"/>
+                            <constraint firstItem="xUb-IK-DJS" firstAttribute="leading" secondItem="vPy-zu-Kie" secondAttribute="leading" id="nwL-2a-kEN"/>
+                            <constraint firstItem="xUb-IK-DJS" firstAttribute="top" secondItem="vPy-zu-Kie" secondAttribute="top" id="pOn-rK-Nis"/>
+                            <constraint firstItem="2Vf-gX-ULu" firstAttribute="leading" secondItem="vPy-zu-Kie" secondAttribute="leading" id="zHG-WQ-Mrr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vPy-zu-Kie"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Restaurants" id="slT-MQ-Fkt">
+                        <barButtonItem key="leftBarButtonItem" title="Nearest" image="location_icon" id="z3J-ic-7zB"/>
+                        <barButtonItem key="rightBarButtonItem" title="Zip Code" id="hIo-G5-pdz"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="jV0-fM-tpB" id="UOe-8v-cqI"/>
+                        <outlet property="emptyView" destination="xUb-IK-DJS" id="ngF-f0-goG"/>
+                        <outlet property="infoLabel" destination="DRF-Ju-7Lv" id="qs3-cM-ECP"/>
+                        <outlet property="nearestBarButtonItem" destination="z3J-ic-7zB" id="eAW-nl-INE"/>
+                        <outlet property="tableView" destination="2Vf-gX-ULu" id="8Im-jr-5gD"/>
+                        <outlet property="zipCodeBarButtonItem" destination="hIo-G5-pdz" id="Bsw-o6-h4x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="suC-QD-lhM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225" y="200"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="location_icon" width="18" height="24"/>
+    </resources>
+</document>

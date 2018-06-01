@@ -8,12 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		4F02FD0120BE01260028BCA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD0020BE01260028BCA4 /* AppDelegate.swift */; };
-		4F02FD0320BE01260028BCA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD0220BE01260028BCA4 /* ViewController.swift */; };
 		4F02FD0620BE01260028BCA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F02FD0420BE01260028BCA4 /* Main.storyboard */; };
 		4F02FD0820BE01270028BCA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F02FD0720BE01270028BCA4 /* Assets.xcassets */; };
 		4F02FD0B20BE01270028BCA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F02FD0920BE01270028BCA4 /* LaunchScreen.storyboard */; };
 		4F02FD1620BE01270028BCA4 /* JustEatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD1520BE01270028BCA4 /* JustEatTests.swift */; };
 		4F02FD2120BE01270028BCA4 /* JustEatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD2020BE01270028BCA4 /* JustEatUITests.swift */; };
+		4F02FD3920BE02790028BCA4 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD3820BE02790028BCA4 /* FlowCoordinator.swift */; };
+		4F3554C420C0B14E00C03BEE /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3554C320C0B14E00C03BEE /* AppError.swift */; };
+		4F61DB2F20C06999004A008E /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F61DB2E20C06999004A008E /* RestaurantCell.swift */; };
+		4F61DB3420C06E7E004A008E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F61DB3320C06E7E004A008E /* Strings.swift */; };
+		4F61DB3A20C0A0DD004A008E /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F61DB3920C0A0DD004A008E /* LocationService.swift */; };
+		4F61DB3C20C0A24E004A008E /* LocationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F61DB3B20C0A24E004A008E /* LocationError.swift */; };
+		4F86B6EB20BE10D0006F95DF /* RestaurantsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B6EA20BE10D0006F95DF /* RestaurantsCoordinator.swift */; };
+		4F86B6ED20BE1590006F95DF /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B6EC20BE1590006F95DF /* RestaurantsViewController.swift */; };
+		4F86B6EF20BE187C006F95DF /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B6EE20BE187C006F95DF /* DependencyContainer.swift */; };
+		4F86B6F320BE1C7E006F95DF /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B6F220BE1C7E006F95DF /* ApiService.swift */; };
+		4F86B6F520BE1D7B006F95DF /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B6F420BE1D7B006F95DF /* ApiConfig.swift */; };
+		4F86B6F720C02B7E006F95DF /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B6F620C02B7E006F95DF /* ApiError.swift */; };
+		4F86B6FB20C03000006F95DF /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B6FA20C03000006F95DF /* Restaurant.swift */; };
+		4F86B6FD20C03030006F95DF /* RestaurantsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B6FC20C03030006F95DF /* RestaurantsDataModel.swift */; };
+		4F86B70020C03FC0006F95DF /* AnyCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B6FF20C03FC0006F95DF /* AnyCodingKey.swift */; };
+		4F86B70220C04170006F95DF /* ApiServise+Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B70120C04170006F95DF /* ApiServise+Restaurants.swift */; };
+		4F86B70420C04247006F95DF /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B70320C04247006F95DF /* ID.swift */; };
+		4FAFA47220C05629001517DE /* RestaurantsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFA47120C05629001517DE /* RestaurantsViewModel.swift */; };
+		53F8E325737C7673A062A658 /* Pods_JustEatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979C77DF560A00601E32517C /* Pods_JustEatTests.framework */; };
+		78D0DC38F5905E6055D149F7 /* Pods_JustEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E577071F96A873EE70977D /* Pods_JustEat.framework */; };
+		C44D49911D70EDD6F7AC033C /* Pods_JustEatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEB0C26C43AAA3058377F1B /* Pods_JustEatUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +54,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A9C86289CA0B8AAD9CD90D8 /* Pods-JustEatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustEatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustEatTests/Pods-JustEatTests.release.xcconfig"; sourceTree = "<group>"; };
+		271C7256E3F42AEE4E1AFC40 /* Pods-JustEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustEat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustEat/Pods-JustEat.debug.xcconfig"; sourceTree = "<group>"; };
+		43E577071F96A873EE70977D /* Pods_JustEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F02FCFD20BE01260028BCA4 /* JustEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F02FD0020BE01260028BCA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4F02FD0220BE01260028BCA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4F02FD0520BE01260028BCA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F02FD0720BE01270028BCA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F02FD0A20BE01270028BCA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +69,30 @@
 		4F02FD1C20BE01270028BCA4 /* JustEatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustEatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F02FD2020BE01270028BCA4 /* JustEatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustEatUITests.swift; sourceTree = "<group>"; };
 		4F02FD2220BE01270028BCA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F02FD3820BE02790028BCA4 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		4F3554C320C0B14E00C03BEE /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		4F61DB2E20C06999004A008E /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		4F61DB3320C06E7E004A008E /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		4F61DB3920C0A0DD004A008E /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		4F61DB3B20C0A24E004A008E /* LocationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationError.swift; sourceTree = "<group>"; };
+		4F86B6EA20BE10D0006F95DF /* RestaurantsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsCoordinator.swift; sourceTree = "<group>"; };
+		4F86B6EC20BE1590006F95DF /* RestaurantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
+		4F86B6EE20BE187C006F95DF /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		4F86B6F220BE1C7E006F95DF /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		4F86B6F420BE1D7B006F95DF /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		4F86B6F620C02B7E006F95DF /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		4F86B6FA20C03000006F95DF /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		4F86B6FC20C03030006F95DF /* RestaurantsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsDataModel.swift; sourceTree = "<group>"; };
+		4F86B6FF20C03FC0006F95DF /* AnyCodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodingKey.swift; sourceTree = "<group>"; };
+		4F86B70120C04170006F95DF /* ApiServise+Restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiServise+Restaurants.swift"; sourceTree = "<group>"; };
+		4F86B70320C04247006F95DF /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
+		4FAFA47120C05629001517DE /* RestaurantsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewModel.swift; sourceTree = "<group>"; };
+		7AEB0C26C43AAA3058377F1B /* Pods_JustEatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustEatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DA19F30F7D500A6F3D1A855 /* Pods-JustEatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustEatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustEatUITests/Pods-JustEatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8479C44CCFCB4B5F692F43FA /* Pods-JustEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustEat.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustEat/Pods-JustEat.release.xcconfig"; sourceTree = "<group>"; };
+		979C77DF560A00601E32517C /* Pods_JustEatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustEatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98C1343CAD5CA5DE155E62AA /* Pods-JustEatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustEatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustEatTests/Pods-JustEatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3142B977C385C657913C8E0 /* Pods-JustEatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustEatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustEatUITests/Pods-JustEatUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D0DC38F5905E6055D149F7 /* Pods_JustEat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F8E325737C7673A062A658 /* Pods_JustEatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +116,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C44D49911D70EDD6F7AC033C /* Pods_JustEatUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2148BCC28682594872CC1707 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				271C7256E3F42AEE4E1AFC40 /* Pods-JustEat.debug.xcconfig */,
+				8479C44CCFCB4B5F692F43FA /* Pods-JustEat.release.xcconfig */,
+				98C1343CAD5CA5DE155E62AA /* Pods-JustEatTests.debug.xcconfig */,
+				1A9C86289CA0B8AAD9CD90D8 /* Pods-JustEatTests.release.xcconfig */,
+				7DA19F30F7D500A6F3D1A855 /* Pods-JustEatUITests.debug.xcconfig */,
+				B3142B977C385C657913C8E0 /* Pods-JustEatUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4F02FCF420BE01260028BCA4 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +143,8 @@
 				4F02FD1420BE01270028BCA4 /* JustEatTests */,
 				4F02FD1F20BE01270028BCA4 /* JustEatUITests */,
 				4F02FCFE20BE01260028BCA4 /* Products */,
+				2148BCC28682594872CC1707 /* Pods */,
+				5AD9428232B62E463F926701 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +161,10 @@
 		4F02FCFF20BE01260028BCA4 /* JustEat */ = {
 			isa = PBXGroup;
 			children = (
-				4F02FD0020BE01260028BCA4 /* AppDelegate.swift */,
-				4F02FD0220BE01260028BCA4 /* ViewController.swift */,
-				4F02FD0420BE01260028BCA4 /* Main.storyboard */,
-				4F02FD0720BE01270028BCA4 /* Assets.xcassets */,
-				4F02FD0920BE01270028BCA4 /* LaunchScreen.storyboard */,
 				4F02FD0C20BE01270028BCA4 /* Info.plist */,
+				4F02FD0020BE01260028BCA4 /* AppDelegate.swift */,
+				4F02FD2E20BE01430028BCA4 /* Model */,
+				4F02FD2F20BE014E0028BCA4 /* Presentation */,
 			);
 			path = JustEat;
 			sourceTree = "<group>";
@@ -110,8 +172,8 @@
 		4F02FD1420BE01270028BCA4 /* JustEatTests */ = {
 			isa = PBXGroup;
 			children = (
-				4F02FD1520BE01270028BCA4 /* JustEatTests.swift */,
 				4F02FD1720BE01270028BCA4 /* Info.plist */,
+				4F02FD1520BE01270028BCA4 /* JustEatTests.swift */,
 			);
 			path = JustEatTests;
 			sourceTree = "<group>";
@@ -119,10 +181,151 @@
 		4F02FD1F20BE01270028BCA4 /* JustEatUITests */ = {
 			isa = PBXGroup;
 			children = (
-				4F02FD2020BE01270028BCA4 /* JustEatUITests.swift */,
 				4F02FD2220BE01270028BCA4 /* Info.plist */,
+				4F02FD2020BE01270028BCA4 /* JustEatUITests.swift */,
 			);
 			path = JustEatUITests;
+			sourceTree = "<group>";
+		};
+		4F02FD2E20BE01430028BCA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F02FD3020BE01630028BCA4 /* Data */,
+				4F02FD3120BE016C0028BCA4 /* Domain */,
+				4F02FD3220BE01730028BCA4 /* Data Source */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4F02FD2F20BE014E0028BCA4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4F02FD0720BE01270028BCA4 /* Assets.xcassets */,
+				4F02FD3320BE01A70028BCA4 /* Scenes */,
+				4F61DB3220C06E70004A008E /* Common */,
+				4F02FD3420BE01AF0028BCA4 /* Base */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4F02FD3020BE01630028BCA4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4F86B70320C04247006F95DF /* ID.swift */,
+				4F86B6FA20C03000006F95DF /* Restaurant.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4F02FD3120BE016C0028BCA4 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4F86B6EE20BE187C006F95DF /* DependencyContainer.swift */,
+				4F86B6FC20C03030006F95DF /* RestaurantsDataModel.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4F02FD3220BE01730028BCA4 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				4F1FB17220C0A8B4006AA2AE /* Common */,
+				4F86B6F020BE1C60006F95DF /* Remote */,
+				4F61DB3820C0A0B4004A008E /* Local */,
+			);
+			path = "Data Source";
+			sourceTree = "<group>";
+		};
+		4F02FD3320BE01A70028BCA4 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4F02FD0920BE01270028BCA4 /* LaunchScreen.storyboard */,
+				4F02FD0420BE01260028BCA4 /* Main.storyboard */,
+				4F86B6E920BE09BB006F95DF /* Restaurants */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4F02FD3420BE01AF0028BCA4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4F02FD3820BE02790028BCA4 /* FlowCoordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		4F1FB17220C0A8B4006AA2AE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4F3554C320C0B14E00C03BEE /* AppError.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4F61DB2920C06684004A008E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F61DB2E20C06999004A008E /* RestaurantCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4F61DB3220C06E70004A008E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4F61DB3320C06E7E004A008E /* Strings.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4F61DB3820C0A0B4004A008E /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				4F61DB3B20C0A24E004A008E /* LocationError.swift */,
+				4F61DB3920C0A0DD004A008E /* LocationService.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		4F86B6E920BE09BB006F95DF /* Restaurants */ = {
+			isa = PBXGroup;
+			children = (
+				4F86B6EA20BE10D0006F95DF /* RestaurantsCoordinator.swift */,
+				4F86B6EC20BE1590006F95DF /* RestaurantsViewController.swift */,
+				4FAFA47120C05629001517DE /* RestaurantsViewModel.swift */,
+				4F61DB2920C06684004A008E /* Views */,
+			);
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		4F86B6F020BE1C60006F95DF /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				4F86B6F420BE1D7B006F95DF /* ApiConfig.swift */,
+				4F86B6F620C02B7E006F95DF /* ApiError.swift */,
+				4F86B6F220BE1C7E006F95DF /* ApiService.swift */,
+				4F86B70120C04170006F95DF /* ApiServise+Restaurants.swift */,
+				4F86B6FE20C03FB4006F95DF /* Codable */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		4F86B6FE20C03FB4006F95DF /* Codable */ = {
+			isa = PBXGroup;
+			children = (
+				4F86B6FF20C03FC0006F95DF /* AnyCodingKey.swift */,
+			);
+			path = Codable;
+			sourceTree = "<group>";
+		};
+		5AD9428232B62E463F926701 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43E577071F96A873EE70977D /* Pods_JustEat.framework */,
+				979C77DF560A00601E32517C /* Pods_JustEatTests.framework */,
+				7AEB0C26C43AAA3058377F1B /* Pods_JustEatUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +335,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F02FD2520BE01270028BCA4 /* Build configuration list for PBXNativeTarget "JustEat" */;
 			buildPhases = (
+				097659B3C18C3FECCB3FC4EC /* [CP] Check Pods Manifest.lock */,
 				4F02FCF920BE01260028BCA4 /* Sources */,
 				4F02FCFA20BE01260028BCA4 /* Frameworks */,
 				4F02FCFB20BE01260028BCA4 /* Resources */,
+				6B21CC2C484F0AD5E23CDF95 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +354,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F02FD2820BE01270028BCA4 /* Build configuration list for PBXNativeTarget "JustEatTests" */;
 			buildPhases = (
+				06CD56C3F1A1AB788C791D29 /* [CP] Check Pods Manifest.lock */,
 				4F02FD0D20BE01270028BCA4 /* Sources */,
 				4F02FD0E20BE01270028BCA4 /* Frameworks */,
 				4F02FD0F20BE01270028BCA4 /* Resources */,
@@ -167,6 +373,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F02FD2B20BE01270028BCA4 /* Build configuration list for PBXNativeTarget "JustEatUITests" */;
 			buildPhases = (
+				900251BC8CDCF4B733DF5B11 /* [CP] Check Pods Manifest.lock */,
 				4F02FD1820BE01270028BCA4 /* Sources */,
 				4F02FD1920BE01270028BCA4 /* Frameworks */,
 				4F02FD1A20BE01270028BCA4 /* Resources */,
@@ -251,13 +458,113 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06CD56C3F1A1AB788C791D29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JustEatTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		097659B3C18C3FECCB3FC4EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JustEat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B21CC2C484F0AD5E23CDF95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JustEat/Pods-JustEat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
+				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustEat/Pods-JustEat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		900251BC8CDCF4B733DF5B11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JustEatUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4F02FCF920BE01260028BCA4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F02FD0320BE01260028BCA4 /* ViewController.swift in Sources */,
+				4F61DB2F20C06999004A008E /* RestaurantCell.swift in Sources */,
+				4F86B70420C04247006F95DF /* ID.swift in Sources */,
+				4F3554C420C0B14E00C03BEE /* AppError.swift in Sources */,
+				4F61DB3420C06E7E004A008E /* Strings.swift in Sources */,
+				4FAFA47220C05629001517DE /* RestaurantsViewModel.swift in Sources */,
+				4F86B6FB20C03000006F95DF /* Restaurant.swift in Sources */,
+				4F86B70020C03FC0006F95DF /* AnyCodingKey.swift in Sources */,
+				4F86B6FD20C03030006F95DF /* RestaurantsDataModel.swift in Sources */,
 				4F02FD0120BE01260028BCA4 /* AppDelegate.swift in Sources */,
+				4F86B6EF20BE187C006F95DF /* DependencyContainer.swift in Sources */,
+				4F86B6F320BE1C7E006F95DF /* ApiService.swift in Sources */,
+				4F86B6ED20BE1590006F95DF /* RestaurantsViewController.swift in Sources */,
+				4F02FD3920BE02790028BCA4 /* FlowCoordinator.swift in Sources */,
+				4F86B6F720C02B7E006F95DF /* ApiError.swift in Sources */,
+				4F86B70220C04170006F95DF /* ApiServise+Restaurants.swift in Sources */,
+				4F86B6F520BE1D7B006F95DF /* ApiConfig.swift in Sources */,
+				4F61DB3C20C0A24E004A008E /* LocationError.swift in Sources */,
+				4F61DB3A20C0A0DD004A008E /* LocationService.swift in Sources */,
+				4F86B6EB20BE10D0006F95DF /* RestaurantsCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,11 +735,13 @@
 		};
 		4F02FD2620BE01270028BCA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 271C7256E3F42AEE4E1AFC40 /* Pods-JustEat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PTNY5RRD7;
 				INFOPLIST_FILE = JustEat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,11 +755,13 @@
 		};
 		4F02FD2720BE01270028BCA4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8479C44CCFCB4B5F692F43FA /* Pods-JustEat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PTNY5RRD7;
 				INFOPLIST_FILE = JustEat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,6 +775,7 @@
 		};
 		4F02FD2920BE01270028BCA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C1343CAD5CA5DE155E62AA /* Pods-JustEatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +797,7 @@
 		};
 		4F02FD2A20BE01270028BCA4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A9C86289CA0B8AAD9CD90D8 /* Pods-JustEatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +819,7 @@
 		};
 		4F02FD2C20BE01270028BCA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DA19F30F7D500A6F3D1A855 /* Pods-JustEatUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +840,7 @@
 		};
 		4F02FD2D20BE01270028BCA4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3142B977C385C657913C8E0 /* Pods-JustEatUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
