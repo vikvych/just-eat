@@ -14,7 +14,6 @@ struct DependencyContainer: RestaurantsDataModelContainer {
     
 }
 
-
 extension DependencyContainer {
     
     static func defaultContainer() -> DependencyContainer {

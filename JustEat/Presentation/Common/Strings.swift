@@ -20,9 +20,18 @@ struct Strings {
     
     struct Error {
         
-        static let locationDenied = "Location Services Disabled"
-        static let locationDeniedDescription = "Please, enable location services in Settings to be able to search nearest restaurants"
-        static let locationNoPlacemark = "No placemark found"
+        static let apiNetworkErrorFormat = "Network request failed cause: %@"
+        static let apiInvalidParams = "Invalid params"
+        static let apiEmptyResponse = "Server returned empty response"
+        static let apiFailedToParse = "Failed to to parse network response: %@"
+        
+        static let locationDenied = "Location Services access denied"
+        static let locationDeniedDescription = "Please, grant access to Location Services in Settings to be able to search nearest restaurants"
+        static let locationRestricted = "Location Services access restricted"
+        static let locationPostalCodeNotFound = "Postal code not found"
+        static let locationGeocodeErrorFormat = "Failed to get location info cause: %@"
+        static let locationManagerErrorFormat = "Location Services failed cause: %@"
+        
     }
 
     struct Restaurants {

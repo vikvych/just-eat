@@ -7,7 +7,25 @@
 		<key>JustEat.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>11</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4F02FCFC20BE01260028BCA4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4F02FD1020BE01270028BCA4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4F02FD1B20BE01270028BCA4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

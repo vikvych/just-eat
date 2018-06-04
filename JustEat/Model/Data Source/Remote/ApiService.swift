@@ -16,8 +16,8 @@ enum ApiAction: String {
 
 class ApiService {
     
-    let queue = DispatchQueue(label: ApiConfig.queueName, attributes: [.concurrent])
-    let decoder: JSONDecoder = {
+    private let queue = DispatchQueue(label: ApiConfig.queueName, attributes: [.concurrent])
+    private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
         
         decoder.keyDecodingStrategy = .custom{ (codingKeys) -> CodingKey in

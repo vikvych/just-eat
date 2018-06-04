@@ -12,16 +12,15 @@ import ReactiveKit
 
 class LocationService: NSObject {
     
+    private let locationManager = CLLocationManager()
     private var locationObserver: AtomicObserver<CLLocation, LocationError>?
     
-    private lazy var locationManager: CLLocationManager = {
-        let manager = CLLocationManager()
+    override init() {
+        super.init()
         
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-        
-        return manager
-    }()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+    }
     
     func requestLocation() -> Signal<CLLocation, LocationError> {
         return Signal<CLLocation, LocationError> { [weak self] observer in
@@ -71,13 +70,13 @@ extension LocationService: CLLocationManagerDelegate {
 
 extension LocationService: RestaurantsLocationDataSource {
     
-    func requestPlacemark() -> Signal<CLPlacemark, LocationError> {
+    func requestZipCode() -> Signal<String, LocationError> {
         return requestLocation()
             .flatMapLatest { location in
                 Signal { observer in
                     CLGeocoder().reverseGeocodeLocation(location) { placemarks, error in
-                        if let placemark = placemarks?.first {
-                            observer.completed(with: placemark)
+                        if let placemark = placemarks?.first, let zipCode = placemark.postalCode {
+                            observer.completed(with: zipCode)
                         } else if let error = error {
                             observer.failed(.geocode(error: error))
                         } else {

@@ -68,9 +68,13 @@ class RestaurantsViewController: UIViewController {
     
     private func showFailed(_ error: AppError) {
         activityIndicator.isHidden = true
-        infoLabel.text = error.localizedDescription
+        infoLabel.text = error.userMessage
         infoLabel.textColor = .red
         setTableViewHidden(true)
+        
+        if case .location(.denied) = error {
+            showLocationDeniedAlert()
+        }
     }
     
     private func setTableViewHidden(_ hidden: Bool, animated: Bool = true) {
@@ -94,6 +98,17 @@ class RestaurantsViewController: UIViewController {
             guard let text = controller?.textFields?.first?.text else { return }
             
             self?.viewModel.zipCode.value = text
+        })
+        
+        present(controller, animated: true, completion: nil)
+    }
+    
+    private func showLocationDeniedAlert() {
+        let controller = UIAlertController(title: Strings.Error.locationDenied, message: Strings.Error.locationDeniedDescription, preferredStyle: .alert)
+        
+        controller.addAction(UIAlertAction(title: Strings.Action.cancel, style: .cancel, handler: nil))
+        controller.addAction(UIAlertAction(title: Strings.Action.settings, style: .default) { _ in
+            UIApplication.shared.open(URL(string:UIApplicationOpenSettingsURLString)!)
         })
         
         present(controller, animated: true, completion: nil)

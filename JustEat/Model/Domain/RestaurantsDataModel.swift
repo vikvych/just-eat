@@ -7,9 +7,7 @@
 //
 
 import Foundation
-import CoreLocation
 import ReactiveKit
-import Bond
 
 protocol RestaurantsDataModelContainer {
     
@@ -25,14 +23,19 @@ protocol RestaurantsRemoteDataSource {
 
 protocol RestaurantsLocationDataSource {
     
-    func requestPlacemark() -> Signal<CLPlacemark, LocationError>
+    func requestZipCode() -> Signal<String, LocationError>
     
 }
 
 struct RestaurantsDataModel {
     
-    let remoteDataSource: RestaurantsRemoteDataSource
-    let locationDataSource: RestaurantsLocationDataSource
+    private let remoteDataSource: RestaurantsRemoteDataSource
+    private let locationDataSource: RestaurantsLocationDataSource
+    
+    init(remoteDataSource: RestaurantsRemoteDataSource, locationDataSource: RestaurantsLocationDataSource) {
+        self.remoteDataSource = remoteDataSource
+        self.locationDataSource = locationDataSource
+    }
     
     func queryRestaurants(zipCode: String) -> Signal<[Restaurant], AppError> {
         return remoteDataSource.queryRestaurants(zipCode: zipCode)
@@ -40,14 +43,7 @@ struct RestaurantsDataModel {
     }
     
     func queryZipCode() -> Signal<String, AppError> {
-        return locationDataSource.requestPlacemark()
-            .tryMap({ placemark -> Result<String, LocationError> in
-                if let zipCode = placemark.postalCode {
-                    return .success(zipCode)
-                } else {
-                    return .failure(.postalCodeNotFound)
-                }
-            })
+        return locationDataSource.requestZipCode()
             .mapError(AppError.location)
     }
     

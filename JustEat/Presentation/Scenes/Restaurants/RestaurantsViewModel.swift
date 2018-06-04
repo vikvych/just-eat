@@ -11,16 +11,18 @@ import ReactiveKit
 
 struct RestaurantsViewModel {
     
-    let dependecyContainer: RestaurantsDataModelContainer
     let zipCode: Property<String?> = Property(nil)
     let items = Property<[Restaurant]>([])
     
+    private let dependecyContainer: RestaurantsDataModelContainer
+
     init(with dependecyContainer: RestaurantsDataModelContainer) {
         self.dependecyContainer = dependecyContainer
     }
     
     func restaurants(queryNearestSignal: SafeSignal<Void>) -> LoadingSignal<[Restaurant], AppError> {
         let dataModel = dependecyContainer.restaurantsDataModel
+        let zipCodeProperty = zipCode
         
         let query = zipCode.toSignal()
             .skip(first: 1)
@@ -42,7 +44,7 @@ struct RestaurantsViewModel {
                     .toLoadingSignal()
                     .liftValue { zipCodeSignal in
                         zipCodeSignal
-                            .feedNext(into: self.zipCode, map: { $0 as String? })
+                            .feedNext(into: zipCodeProperty, map: { $0 as String? })
                             .flatMapLatest { zipCode in
                                 dataModel.queryRestaurants(zipCode: zipCode)
                         }

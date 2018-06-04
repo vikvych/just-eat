@@ -13,12 +13,18 @@ target 'JustEat' do
   
   target 'JustEatTests' do
     inherit! :search_paths
+    
     # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
   end
 
   target 'JustEatUITests' do
     inherit! :search_paths
+    
     # Pods for testing
+    pod 'Quick'
+    pod 'Nimble'
   end
 
 end

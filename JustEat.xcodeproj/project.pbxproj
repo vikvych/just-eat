@@ -11,7 +11,6 @@
 		4F02FD0620BE01260028BCA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F02FD0420BE01260028BCA4 /* Main.storyboard */; };
 		4F02FD0820BE01270028BCA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F02FD0720BE01270028BCA4 /* Assets.xcassets */; };
 		4F02FD0B20BE01270028BCA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F02FD0920BE01270028BCA4 /* LaunchScreen.storyboard */; };
-		4F02FD1620BE01270028BCA4 /* JustEatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD1520BE01270028BCA4 /* JustEatTests.swift */; };
 		4F02FD2120BE01270028BCA4 /* JustEatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD2020BE01270028BCA4 /* JustEatUITests.swift */; };
 		4F02FD3920BE02790028BCA4 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F02FD3820BE02790028BCA4 /* FlowCoordinator.swift */; };
 		4F2E598E20C0E36400CB7A2F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E598D20C0E36400CB7A2F /* Colors.swift */; };
@@ -21,6 +20,15 @@
 		4F2E599920C0F0FB00CB7A2F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E599820C0F0FB00CB7A2F /* DetailViewModel.swift */; };
 		4F2E599C20C0F25800CB7A2F /* RestaurantInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E599B20C0F25800CB7A2F /* RestaurantInfoView.swift */; };
 		4F2E599E20C0FD0D00CB7A2F /* RestaurantAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E599D20C0FD0D00CB7A2F /* RestaurantAnnotation.swift */; };
+		4F2E59A520C15CC000CB7A2F /* UserRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E59A420C15CC000CB7A2F /* UserRepresentable.swift */; };
+		4F2E59A720C15D1100CB7A2F /* AppError+UserRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E59A620C15D1100CB7A2F /* AppError+UserRepresentable.swift */; };
+		4F2E59A920C15D9000CB7A2F /* ApiError+UserRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E59A820C15D9000CB7A2F /* ApiError+UserRepresentable.swift */; };
+		4F2E59AB20C15DAA00CB7A2F /* LocationError+UserRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E59AA20C15DAA00CB7A2F /* LocationError+UserRepresentable.swift */; };
+		4F2E59B120C1839A00CB7A2F /* RestaurantsDataModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E59B020C1839A00CB7A2F /* RestaurantsDataModelSpec.swift */; };
+		4F2E59B920C18C3200CB7A2F /* ReactiveKitHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E59B520C18C3200CB7A2F /* ReactiveKitHelpers.swift */; };
+		4F2E59BE20C19E4C00CB7A2F /* Restaurant+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E59BD20C19E4C00CB7A2F /* Restaurant+Mock.swift */; };
+		4F2E59C020C19EA900CB7A2F /* Logo+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E59BF20C19EA900CB7A2F /* Logo+Mock.swift */; };
+		4F2E59C720C40D0700CB7A2F /* MockCLPlacemark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E59C620C40D0700CB7A2F /* MockCLPlacemark.swift */; };
 		4F3554C420C0B14E00C03BEE /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3554C320C0B14E00C03BEE /* AppError.swift */; };
 		4F61DB2F20C06999004A008E /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F61DB2E20C06999004A008E /* RestaurantCell.swift */; };
 		4F61DB3420C06E7E004A008E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F61DB3320C06E7E004A008E /* Strings.swift */; };
@@ -37,6 +45,7 @@
 		4F86B70020C03FC0006F95DF /* AnyCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B6FF20C03FC0006F95DF /* AnyCodingKey.swift */; };
 		4F86B70220C04170006F95DF /* ApiServise+Restaurants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B70120C04170006F95DF /* ApiServise+Restaurants.swift */; };
 		4F86B70420C04247006F95DF /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86B70320C04247006F95DF /* ID.swift */; };
+		4FAF212620C45D5D00530DA5 /* JustEatSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAF212520C45D5D00530DA5 /* JustEatSpec.swift */; };
 		4FAFA47220C05629001517DE /* RestaurantsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAFA47120C05629001517DE /* RestaurantsViewModel.swift */; };
 		53F8E325737C7673A062A658 /* Pods_JustEatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 979C77DF560A00601E32517C /* Pods_JustEatTests.framework */; };
 		78D0DC38F5905E6055D149F7 /* Pods_JustEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E577071F96A873EE70977D /* Pods_JustEat.framework */; };
@@ -71,7 +80,6 @@
 		4F02FD0A20BE01270028BCA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F02FD0C20BE01270028BCA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F02FD1120BE01270028BCA4 /* JustEatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustEatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F02FD1520BE01270028BCA4 /* JustEatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustEatTests.swift; sourceTree = "<group>"; };
 		4F02FD1720BE01270028BCA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F02FD1C20BE01270028BCA4 /* JustEatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustEatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F02FD2020BE01270028BCA4 /* JustEatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustEatUITests.swift; sourceTree = "<group>"; };
@@ -84,6 +92,15 @@
 		4F2E599820C0F0FB00CB7A2F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		4F2E599B20C0F25800CB7A2F /* RestaurantInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantInfoView.swift; sourceTree = "<group>"; };
 		4F2E599D20C0FD0D00CB7A2F /* RestaurantAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnotation.swift; sourceTree = "<group>"; };
+		4F2E59A420C15CC000CB7A2F /* UserRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepresentable.swift; sourceTree = "<group>"; };
+		4F2E59A620C15D1100CB7A2F /* AppError+UserRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppError+UserRepresentable.swift"; sourceTree = "<group>"; };
+		4F2E59A820C15D9000CB7A2F /* ApiError+UserRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiError+UserRepresentable.swift"; sourceTree = "<group>"; };
+		4F2E59AA20C15DAA00CB7A2F /* LocationError+UserRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationError+UserRepresentable.swift"; sourceTree = "<group>"; };
+		4F2E59B020C1839A00CB7A2F /* RestaurantsDataModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsDataModelSpec.swift; sourceTree = "<group>"; };
+		4F2E59B520C18C3200CB7A2F /* ReactiveKitHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveKitHelpers.swift; sourceTree = "<group>"; };
+		4F2E59BD20C19E4C00CB7A2F /* Restaurant+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Restaurant+Mock.swift"; sourceTree = "<group>"; };
+		4F2E59BF20C19EA900CB7A2F /* Logo+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logo+Mock.swift"; sourceTree = "<group>"; };
+		4F2E59C620C40D0700CB7A2F /* MockCLPlacemark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCLPlacemark.swift; sourceTree = "<group>"; };
 		4F3554C320C0B14E00C03BEE /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		4F61DB2E20C06999004A008E /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		4F61DB3320C06E7E004A008E /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -100,6 +117,7 @@
 		4F86B6FF20C03FC0006F95DF /* AnyCodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodingKey.swift; sourceTree = "<group>"; };
 		4F86B70120C04170006F95DF /* ApiServise+Restaurants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiServise+Restaurants.swift"; sourceTree = "<group>"; };
 		4F86B70320C04247006F95DF /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
+		4FAF212520C45D5D00530DA5 /* JustEatSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustEatSpec.swift; sourceTree = "<group>"; };
 		4FAFA47120C05629001517DE /* RestaurantsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewModel.swift; sourceTree = "<group>"; };
 		7AEB0C26C43AAA3058377F1B /* Pods_JustEatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustEatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA19F30F7D500A6F3D1A855 /* Pods-JustEatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustEatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustEatUITests/Pods-JustEatUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,7 +205,10 @@
 			isa = PBXGroup;
 			children = (
 				4F02FD1720BE01270028BCA4 /* Info.plist */,
-				4F02FD1520BE01270028BCA4 /* JustEatTests.swift */,
+				4FAF212520C45D5D00530DA5 /* JustEatSpec.swift */,
+				4F2E59B520C18C3200CB7A2F /* ReactiveKitHelpers.swift */,
+				4F2E59C320C40C5200CB7A2F /* Mocks */,
+				4F2E59BB20C19E3A00CB7A2F /* Model */,
 			);
 			path = JustEatTests;
 			sourceTree = "<group>";
@@ -245,9 +266,9 @@
 		4F02FD3220BE01730028BCA4 /* Data Source */ = {
 			isa = PBXGroup;
 			children = (
-				4F1FB17220C0A8B4006AA2AE /* Common */,
 				4F86B6F020BE1C60006F95DF /* Remote */,
 				4F61DB3820C0A0B4004A008E /* Local */,
+				4F1FB17220C0A8B4006AA2AE /* Common */,
 			);
 			path = "Data Source";
 			sourceTree = "<group>";
@@ -260,7 +281,6 @@
 				4F86B6EA20BE10D0006F95DF /* RestaurantsCoordinator.swift */,
 				4F86B6E920BE09BB006F95DF /* Restaurants */,
 				4F2E599520C0F02D00CB7A2F /* Detail */,
-				4F2E599A20C0F24000CB7A2F /* Common */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -290,21 +310,58 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		4F2E599A20C0F24000CB7A2F /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				4F2E599D20C0FD0D00CB7A2F /* RestaurantAnnotation.swift */,
-				4F2E599F20C0FD1600CB7A2F /* View */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		4F2E599F20C0FD1600CB7A2F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4F2E599D20C0FD0D00CB7A2F /* RestaurantAnnotation.swift */,
 				4F2E599B20C0F25800CB7A2F /* RestaurantInfoView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4F2E59A320C15C9600CB7A2F /* User Representable */ = {
+			isa = PBXGroup;
+			children = (
+				4F2E59A420C15CC000CB7A2F /* UserRepresentable.swift */,
+				4F2E59A620C15D1100CB7A2F /* AppError+UserRepresentable.swift */,
+				4F2E59A820C15D9000CB7A2F /* ApiError+UserRepresentable.swift */,
+				4F2E59AA20C15DAA00CB7A2F /* LocationError+UserRepresentable.swift */,
+			);
+			path = "User Representable";
+			sourceTree = "<group>";
+		};
+		4F2E59BB20C19E3A00CB7A2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F2E59C220C40C2F00CB7A2F /* Domain */,
+				4F2E59BC20C19E4200CB7A2F /* Data */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4F2E59BC20C19E4200CB7A2F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4F2E59BD20C19E4C00CB7A2F /* Restaurant+Mock.swift */,
+				4F2E59BF20C19EA900CB7A2F /* Logo+Mock.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4F2E59C220C40C2F00CB7A2F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4F2E59B020C1839A00CB7A2F /* RestaurantsDataModelSpec.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4F2E59C320C40C5200CB7A2F /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4F2E59C620C40D0700CB7A2F /* MockCLPlacemark.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		4F61DB2920C06684004A008E /* Views */ = {
@@ -320,6 +377,8 @@
 			children = (
 				4F61DB3320C06E7E004A008E /* Strings.swift */,
 				4F2E598D20C0E36400CB7A2F /* Colors.swift */,
+				4F2E59A320C15C9600CB7A2F /* User Representable */,
+				4F2E599F20C0FD1600CB7A2F /* View */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -403,6 +462,7 @@
 				4F02FD0D20BE01270028BCA4 /* Sources */,
 				4F02FD0E20BE01270028BCA4 /* Frameworks */,
 				4F02FD0F20BE01270028BCA4 /* Resources */,
+				0B3B055F3268641A57A6B2A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -422,6 +482,7 @@
 				4F02FD1820BE01270028BCA4 /* Sources */,
 				4F02FD1920BE01270028BCA4 /* Frameworks */,
 				4F02FD1A20BE01270028BCA4 /* Resources */,
+				3EFDCB776EB8417773EFECD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -448,6 +509,7 @@
 					};
 					4F02FD1020BE01270028BCA4 = {
 						CreatedOnToolsVersion = 9.3.1;
+						LastSwiftMigration = 0940;
 						TestTargetID = 4F02FCFC20BE01260028BCA4;
 					};
 					4F02FD1B20BE01270028BCA4 = {
@@ -540,6 +602,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		0B3B055F3268641A57A6B2A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JustEatTests/Pods-JustEatTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustEatTests/Pods-JustEatTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EFDCB776EB8417773EFECD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JustEatUITests/Pods-JustEatUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustEatUITests/Pods-JustEatUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6B21CC2C484F0AD5E23CDF95 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -603,8 +705,10 @@
 				4F2E599920C0F0FB00CB7A2F /* DetailViewModel.swift in Sources */,
 				4FAFA47220C05629001517DE /* RestaurantsViewModel.swift in Sources */,
 				4F86B6FB20C03000006F95DF /* Restaurant.swift in Sources */,
+				4F2E59A920C15D9000CB7A2F /* ApiError+UserRepresentable.swift in Sources */,
 				4F86B70020C03FC0006F95DF /* AnyCodingKey.swift in Sources */,
 				4F86B6FD20C03030006F95DF /* RestaurantsDataModel.swift in Sources */,
+				4F2E59A520C15CC000CB7A2F /* UserRepresentable.swift in Sources */,
 				4F02FD0120BE01260028BCA4 /* AppDelegate.swift in Sources */,
 				4F86B6EF20BE187C006F95DF /* DependencyContainer.swift in Sources */,
 				4F86B6F320BE1C7E006F95DF /* ApiService.swift in Sources */,
@@ -616,7 +720,9 @@
 				4F86B70220C04170006F95DF /* ApiServise+Restaurants.swift in Sources */,
 				4F86B6F520BE1D7B006F95DF /* ApiConfig.swift in Sources */,
 				4F61DB3C20C0A24E004A008E /* LocationError.swift in Sources */,
+				4F2E59A720C15D1100CB7A2F /* AppError+UserRepresentable.swift in Sources */,
 				4F61DB3A20C0A0DD004A008E /* LocationService.swift in Sources */,
+				4F2E59AB20C15DAA00CB7A2F /* LocationError+UserRepresentable.swift in Sources */,
 				4F2E599C20C0F25800CB7A2F /* RestaurantInfoView.swift in Sources */,
 				4F86B6EB20BE10D0006F95DF /* RestaurantsCoordinator.swift in Sources */,
 			);
@@ -626,7 +732,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F02FD1620BE01270028BCA4 /* JustEatTests.swift in Sources */,
+				4F2E59C020C19EA900CB7A2F /* Logo+Mock.swift in Sources */,
+				4F2E59BE20C19E4C00CB7A2F /* Restaurant+Mock.swift in Sources */,
+				4F2E59C720C40D0700CB7A2F /* MockCLPlacemark.swift in Sources */,
+				4F2E59B120C1839A00CB7A2F /* RestaurantsDataModelSpec.swift in Sources */,
+				4F2E59B920C18C3200CB7A2F /* ReactiveKitHelpers.swift in Sources */,
+				4FAF212620C45D5D00530DA5 /* JustEatSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,6 +944,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PTNY5RRD7;
 				INFOPLIST_FILE = JustEatTests/Info.plist;
@@ -843,6 +955,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ivantkachenko.JustEatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JustEat.app/JustEat";
@@ -855,6 +968,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PTNY5RRD7;
 				INFOPLIST_FILE = JustEatTests/Info.plist;
