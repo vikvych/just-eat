@@ -21,7 +21,7 @@ DEPENDENCIES:
   - ReactiveKit
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
     - Bond
@@ -43,4 +43,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 6c43c058bd5cd01654702206bc5bc50c8192887b
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

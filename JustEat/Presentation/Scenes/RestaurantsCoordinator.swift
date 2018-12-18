@@ -12,7 +12,7 @@ enum SegueId: String {
     case detail
 }
 
-class RestaurantsCoordinator: NSObject, UITableViewDelegate, FlowCoordinator {
+class RestaurantsCoordinator: NSObject, UINavigationControllerDelegate, FlowCoordinator {
     
     @IBOutlet weak var navigationController: UINavigationController!
     
